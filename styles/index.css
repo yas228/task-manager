@@ -38,6 +38,7 @@ body{
     }
     .fixed-header{
         top: 0;
+        border-radius: 20px;
     }
     .fixed-footer{
         bottom: 0;
