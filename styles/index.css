@@ -275,7 +275,7 @@ body{
 
 .instagram-img {
   float: left;
-  width: 30.33%;
+  width: 4.8%;
   padding:5px;
   text-align: center;
   text-decoration: none;
@@ -285,7 +285,7 @@ body{
 
 .twitter-img {
   float: left;
-  width: 30.33%;
+  width: 5%;
   padding:5px;
   text-align: center;
   text-decoration: none;
@@ -305,7 +305,7 @@ body{
 
 .facebook-img {
   float: left;
-  width: 30.33%;
+  width: 4.5%;
   padding:5px;
   text-align: center;
   text-decoration: none;
@@ -342,8 +342,44 @@ body{
     background: #616161;
     border-radius: 20px;
   }
-  .footer-align{
-    display: none;
+  .instagram-img {
+    float: left;
+    width: 7%;
+    padding:5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px 20px;
+  }
+
+
+  .twitter-img {
+    float: left;
+    width: 7%;
+    padding:5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 20px;
+    margin-top: 2px;
+  }
+
+  .copyright{
+    float: left;
+    width: 50.33%;
+    padding:5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0px 20px;
+    margin-top: 4px;
+  }
+
+
+  .facebook-img {
+    float: left;
+    width: 7%;
+    padding:5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 20px;
   }
 
 
