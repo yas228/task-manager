@@ -154,6 +154,7 @@ body{
   margin-left: 3%;
   background: #616161;
   border-radius: 20px;
+  margin-top: 3%;
 }
 
 .vertical2{
@@ -191,6 +192,8 @@ body{
   border: 3px solid black;
   margin: 10px;
   background: darkgray;
+  margin-bottom: 20%;
+  margin-top: 15%;
 }
 #welcome1{
   display: none;
@@ -307,4 +310,42 @@ body{
   text-align: center;
   text-decoration: none;
   margin: 2px 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .body_section{
+
+    flex-direction: column;
+  }
+  .vertical1{
+    flex-direction: column;
+    margin-top: 500px;
+    width: 95%;
+    height: 80%;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 10px;
+    margin-left: 3%;
+    background: #616161;
+    border-radius: 20px;
+  }
+
+  .vertical2{
+    flex-direction: column;
+    margin-top: 500px;
+    width: 95%;
+    height: 80%;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 10px;
+    margin-left: 3%;
+    background: #616161;
+    border-radius: 20px;
+  }
+  .footer-align{
+    display: none;
+  }
+
+
+
 }
