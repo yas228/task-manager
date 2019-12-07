@@ -16,12 +16,7 @@ body{
 
 
 /*****HEADER***/
-#header1{
-  display: none;
-}
-#username{
-  display: none;
-}
+
 body{
         padding-top: 60px;
         padding-bottom: 40px;
@@ -134,18 +129,11 @@ body{
 {
     text-align:center;
 }
-#bloc1, #bloc2, #bloc3
+#bloc1, #bloc2
 {
     display:inline;
 }
-#bloc3{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  display: inline-block;
-}
+
 
 /*****BODY***/
 
@@ -206,12 +194,6 @@ body{
   margin-bottom: 20%;
   margin-top: 15%;
 }
-#welcome1{
-  display: none;
-}
-
-
-
   .lowline{
     position: relative;
     display: inline-block;
@@ -273,13 +255,9 @@ body{
   text-align: center;
   background-color: #222;
   padding: 10px 0px;
-  margin: 6px;
+  margin: 20px;
   width: 95%;
   border-radius: 20px;
-
-  position: fixed;
-  right: 0;
-  height: auto
 }
 
 
