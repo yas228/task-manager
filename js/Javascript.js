@@ -21,7 +21,7 @@
       document.getElementById("username").style.display="none";
       document.getElementById("welcome1").style.display="none";
       document.getElementById("welcome0").style.display="inline-block";
-      document.getElementById("logo").src="images/user.png";
+      document.getElementById("logo").src="images/User.png";
     }
 }
   function deleteform(){
@@ -43,7 +43,7 @@
       document.getElementById("username").style.display="none";
       document.getElementById("welcome1").style.display="none";
       document.getElementById("welcome0").style.display="inline-block";
-      document.getElementById("logo").src="images/user.png";
+      document.getElementById("logo").src="images/User.png";
       localStorage.setItem("logged", "false");
       alert("You logged out correctly");
   }
