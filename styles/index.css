@@ -14,7 +14,15 @@ body{
   width: 100%;
 }
 
-
+#username{
+  display: none;
+}
+#header1{
+  display: none;
+}
+#welcome1{
+  display: none;
+}
 /*****HEADER***/
 
 body{
