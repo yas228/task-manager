@@ -146,3 +146,5 @@
 
 
   }
+
+  checkLogin();

@@ -35,7 +35,7 @@
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    /* z-index: 1000; */
+    z-index: 1000;
     /* Position the tooltip */
     position: absolute;
     /* z-index: 1; */
@@ -141,7 +141,7 @@
 }
 
 .chatPreview{
-    position: relative;
+    /* position: relative; */
     background: rgb(173, 218, 145);
     display: grid;
     height: 18%;

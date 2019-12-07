@@ -15,9 +15,9 @@
             <div id="bloc1">
                     <img class="logo" id="logo" src ="images/User.png" alt="User logo">
             </div>
-            <div id="bloc3">
+            <!-- <div id="bloc3">
                 <input type="text" placeholder="Search"/>
-            </div>
+            </div> -->
             <div id="bloc2">
                 <ul class = "list_header2" id="username">
                     <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
@@ -34,6 +34,76 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div id="register" class="register">
+      <div class="register-form">
+        <form onsubmit="checkCookie()">
+          Username:
+          <input id="user" type="text"  required>
+          <br><br>
+          Password:
+          <input id="pass" type="password" pattern="[a-z0-9.-]{1,}" required>
+          <br><br>
+          Name:
+          <input id="name" type="text" required>
+          <br></br>
+          Surname:
+          <input id="surname" type="text" required>
+          <br><br>
+          Email:
+          <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <br><br>
+          Image URL:
+          <input id="img" type="text" >
+          <br><br>
+          Date of Birth:
+          <input id="birth" type="Date" required>
+          <br><br>
+          Interests:
+          <select id="interests">
+            <option ></option>
+            <option >Computer Science</option>
+            <option >Videogames</option>
+            <option >Art</option>
+            <option >Cooking</option>
+          </select>
+          <br><br>
+          Language:
+          <select id="languages">
+            <option ></option>
+            <option >English</option>
+            <option >Spanish</option>
+            <option >German</option>
+            <option >French</option>
+          </select>
+          <br><br>
+          Your purpose:
+          <input id="purpose" type="text" >
+          <br><br>
+          <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
+          <br><br>
+          <input type="submit" value="Save">
+          <input onclick="deleteform()" type="reset" value="Delete">
+        </form>
+
+
+      </div>
+    </div>
+
+    <div id="login" class="login">
+      <div class="login-form">
+        <form onsubmit="checkLoginCookie()">
+          Email:
+          <input id="emaillogin" type="email" required>
+          <br><br>
+          Password:
+          <input id="passlogin" type="password" required>
+          <br><br>
+          <input type="submit" value="Login">
+        </form>
+
+
+      </div>
     </div>
     <div class="container">
         <div id="sideNavBox">
