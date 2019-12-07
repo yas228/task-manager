@@ -1,10 +1,29 @@
 
   var cookieContent = "";
-  var logged=false;
   var cookie="";
   var cookiel="";
-
-
+  var logged = localStorage.getItem("logged");
+  function checkLogin(){
+    if(logged=="true"){
+      document.getElementById("HeaderUsername").innerHTML= localStorage.getItem("username");
+      document.getElementById("wusername").innerHTML= localStorage.getItem("username");
+      document.getElementById("login").style.display="none";
+      document.getElementById("header1").style.display="inline-block";
+      document.getElementById("welcome1").style.display="inline-block";
+      document.getElementById("body").style.display="flex";
+      document.getElementById("header2").style.display="none";
+      document.getElementById("welcome0").style.display="none";
+      document.getElementById("username").style.display="inline-block";
+    }
+     else{
+      document.getElementById("header1").style.display="none";
+      document.getElementById("header2").style.display="inline-block";
+      document.getElementById("username").style.display="none";
+      document.getElementById("welcome1").style.display="none";
+      document.getElementById("welcome0").style.display="inline-block";
+      document.getElementById("logo").src="images/User.png";
+    }
+}
   function deleteform(){
       document.getElementById("user").value="";
       document.getElementById("name").value="";
@@ -23,9 +42,9 @@
       document.getElementById("header2").style.display="inline-block";
       document.getElementById("username").style.display="none";
       document.getElementById("welcome1").style.display="none";
-      document.getElementById("welcome0").style.display="none";
-      document.getElementById("logo").src="images/user.png";
-      logged=false;
+      document.getElementById("welcome0").style.display="inline-block";
+      document.getElementById("logo").src="images/User.png";
+      localStorage.setItem("logged", "false");
       alert("You logged out correctly");
   }
   function login(){
@@ -85,6 +104,7 @@
          alert("Incorrect password.");
         return;
        }
+       localStorage.setItem("username", content[2]);
        document.getElementById("HeaderUsername").innerHTML= content[2];
        document.getElementById("wusername").innerHTML= content[2];
        document.getElementById("login").style.display="none";
@@ -97,7 +117,7 @@
        if(content[3]!=""){
          document.getElementById("logo").src=content[3];
        }
-       logged=true;
+       localStorage.setItem("logged", "true");
        alert("You have logged in correctly!");
      }
 
