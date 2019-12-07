@@ -134,11 +134,18 @@ body{
 {
     text-align:center;
 }
-#bloc1, #bloc2
+#bloc1, #bloc2, #bloc3
 {
     display:inline;
 }
-
+#bloc3{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  display: inline-block;
+}
 
 /*****BODY***/
 
@@ -266,9 +273,13 @@ body{
   text-align: center;
   background-color: #222;
   padding: 10px 0px;
-  margin: 20px;
+  margin: 6px;
   width: 95%;
   border-radius: 20px;
+
+  position: fixed;
+  right: 0;
+  height: auto
 }
 
 
