@@ -3,6 +3,95 @@
   var cookie="";
   var cookiel="";
   var logged = localStorage.getItem("logged");
+
+
+
+
+  //////NEW FOR DAVID//////////////////////////////////////////////////////////
+
+  function showhambur(elem){
+    document.getElementById(elem).style.display="block";
+  }
+  function showEdit(elem){
+    document.getElementById("projectid").value= elem;
+    document.getElementById("edit").style.display="block";
+  }
+
+  function changeText(){
+    document.getElementById(document.getElementById("projectid").value).innerHTML= document.getElementById("newname").value;
+    document.getElementById("edit").style.display="none";
+  }
+
+  function hide_all(){
+    hideProject("tasks_project_1");
+    hideProject("tasks_project_2");
+    hideProject("tasks_project_3");
+    hideProject("tasks_project_4");
+    hideProject("tasks_project_5");
+  }
+
+  function hide_and_show (elem, elem2){
+    hideProject("tasks_project_1");
+    hideProject("tasks_project_2");
+    hideProject("tasks_project_3");
+    hideProject("tasks_project_4");
+    hideProject("tasks_project_5");
+
+    showProject(elem);
+    document.getElementById("title_of_project").innerHTML= document.getElementById(elem2).innerHTML;
+  }
+
+  
+  function hideColumn (elem) {
+      if(confirm("¿Are you sure you want to remove it?")){
+      document.getElementById(elem).style.display="none";
+    }
+    var elements = document.getElementsByClassName("lowline");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].style.position="relative";
+    }
+  }
+
+  function hideProject(elem){
+      document.getElementById(elem).style.display="none";
+  }
+
+  function showProject(elem){
+    document.getElementById(elem).style.display="contents";
+}
+
+
+  function sendMessage(){
+    var chat = document.getElementById("chat").value;
+    var date = new Date();
+
+    var chatHistory = document.getElementById("chatHistory").lastElementChild;
+    chatHistory.insertAdjacentHTML ('afterend',
+      "<div class=\"chatContainer darker\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"right\" style=\"width:100%;\"><p>"
+      +chat+"</p><span class=\"time-left\">"+date.getHours()+":"+date.getMinutes()+"</span></div>"
+    )
+    setTimeout(function(){
+      chatHistory = document.getElementById("chatHistory").lastElementChild;
+      chatHistory.insertAdjacentHTML ('afterend',
+      "<div class=\"chatContainer\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"left\" style=\"width:100%;\"><p>Sweet! So, what do you wanna do today?</p><span class=\"time-right\">"+date.getHours()+":"+date.getMinutes()+"</span></div>");
+  }, 2000);
+ 
+   document.getElementById("chat").value = "";
+
+
+  }
+
+
+
+    ///////////////////////////////////////////////////
+
+
+
+
+
+
+
+
   function checkLogin(){
     if(logged=="true"){
       document.getElementById("HeaderUsername").innerHTML= localStorage.getItem("username");
