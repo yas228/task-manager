@@ -26,12 +26,7 @@
       document.getElementById("logo").style.display="none";
     }
 }
-  function logged(){
-      document.getElementById("username").style.display="inline-block";
-      document.getElementById("wusername").style.display="inline-block";
-      document.getElementById("HeaderUsername").style.display="inline-block";
-      document.getElementById("logo").style.display="inline-block";
-}
+
   function deleteform(){
       document.getElementById("user").value="";
       document.getElementById("name").value="";
@@ -50,11 +45,14 @@
       document.getElementById("header2").style.display="inline-block";
       document.getElementById("username").style.display="none";
       document.getElementById("logo").style.display="none";
-      localStorage.setItem("logged", "false");
-      alert("You logged out correctly");
-      window.location.replace("index.html");
       document.getElementById("welcome1").style.display="none";
       document.getElementById("welcome0").style.display="inline-block";
+      localStorage.setItem("logged", "false");
+      alert("You logged out correctly");
+  }
+  function logout1(){
+      window.location.replace("index.html");
+      logout();
   }
   function login(){
     document.getElementById("login").style.display="block";
