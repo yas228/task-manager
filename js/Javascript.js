@@ -41,12 +41,12 @@
       document.getElementById("header1").style.display="none";
       document.getElementById("header2").style.display="inline-block";
       document.getElementById("username").style.display="none";
-      document.getElementById("welcome1").style.display="none";
-      document.getElementById("welcome0").style.display="inline-block";
       document.getElementById("logo").src="images/User.png";
       localStorage.setItem("logged", "false");
       alert("You logged out correctly");
       window.location.replace("index.html");
+      document.getElementById("welcome1").style.display="none";
+      document.getElementById("welcome0").style.display="inline-block";
   }
   function login(){
     document.getElementById("login").style.display="block";
