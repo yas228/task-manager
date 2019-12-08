@@ -14,6 +14,7 @@
       document.getElementById("header2").style.display="none";
       document.getElementById("welcome0").style.display="none";
       document.getElementById("username").style.display="inline-block";
+      document.getElementById("logo").style.display="inline-block";
     }
      else{
       document.getElementById("header1").style.display="none";
@@ -21,7 +22,7 @@
       document.getElementById("username").style.display="none";
       document.getElementById("welcome1").style.display="none";
       document.getElementById("welcome0").style.display="inline-block";
-      document.getElementById("logo").src="images/User.png";
+      document.getElementById("logo").style.display="none";
     }
 }
   function deleteform(){
