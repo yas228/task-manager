@@ -3,39 +3,106 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=.5">
     <title>Chat</title>
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/chat.css">
     <script src="js/Javascript.js"></script>
   </head>
   <body >
-    <div class="fixed-header">
-        <div class="block_container">
-            <div id="bloc1">
+        <div class="fixed-header">
+                <div class="block_container">
+                  <div id="bloc1">
                     <img class="logo" id="logo" src ="images/User.png" alt="User logo">
-            </div>
-            <!-- <div id="bloc3">
-                <input type="text" placeholder="Search"/>
-            </div> -->
-            <div id="bloc2">
-                <ul class = "list_header2" id="username">
-                    <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
-                </ul>
-                <ul class = "list_header" id="header1">
-                    <li class="list"><a href="index.html"  class="top_text">Home</a></li>
-                    <li class="list"><a href="task.html" class="top_text">Task Dashboard</a></li>
-                    <li class="list"><a href="chat.html" class="top_text">Chats</a></li>
-                    <li class="list"><a href="#logout" id="logout" onclick="logout()" class="top_text">Log Out</a></li>
-                </ul>
-                <ul class = "list_header" id="header2">
-                    <li class="list"><a href="#login" onclick="login()" class="top_text">Login</a></li>
-                    <li class="list"><a href="#register" onclick="register()" class="top_text">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+                  </div>
+                  <div id="bloc2">
+                    <ul class = "list_header2" id="username">
+                        <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
+                      </ul>
+                      <ul class = "list_header" id="header1">
+                          <li class="list"><a href="index.html"  class="top_text">Home</a></li>
+                          <li class="list"><a href="task.html" class="top_text">Task Dashboard</a></li>
+                          <li class="list"><a href="chat.html" class="top_text">Chats</a></li>
+                          <li class="list"><a href="#logout" id="logout" onclick="logout()" class="top_text">Log Out</a></li>
+                        </ul>
+                        <ul class = "list_header" id="header2">
+                            <li class="list"><a href="#login" onclick="login()" class="top_text">Login</a></li>
+                            <li class="list"><a href="#register" onclick="register()" class="top_text">Register</a></li>
+                        </ul>
+                  </div>
+                </div>
+              </div>
+                    <div id="register" class="register">
+                      <div class="register-form">
+                        <form onsubmit="checkCookie()">
+                          Username:
+                          <input id="user" type="text"  required>
+                          <br><br>
+                          Password:
+                          <input id="pass" type="password" pattern="[a-z0-9.-]{1,}" required>
+                          <br><br>
+                          Name:
+                          <input id="name" type="text" required>
+                          <br></br>
+                          Surname:
+                          <input id="surname" type="text" required>
+                          <br><br>
+                          Email:
+                          <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                          <br><br>
+                          Image URL:
+                          <input id="img" type="text" >
+                          <br><br>
+                          Date of Birth:
+                          <input id="birth" type="Date" required>
+                          <br><br>
+                          Interests:
+                          <select id="interests">
+                            <option ></option>
+                            <option >Computer Science</option>
+                            <option >Videogames</option>
+                            <option >Art</option>
+                            <option >Cooking</option>
+                          </select>
+                          <br><br>
+                          Language:
+                          <select id="languages">
+                            <option ></option>
+                            <option >English</option>
+                            <option >Spanish</option>
+                            <option >German</option>
+                            <option >French</option>
+                          </select>
+                          <br><br>
+                          Your purpose:
+                          <input id="purpose" type="text" >
+                          <br><br>
+                          <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
+                          <br><br>
+                          <input type="submit" value="Save">
+                          <input onclick="deleteform()" type="reset" value="Delete">
+                        </form>
+            
+            
+                      </div>
+                    </div>
+            
+                    <div id="login" class="login">
+                      <div class="login-form">
+                        <form onsubmit="checkLoginCookie()">
+                          Email:
+                          <input id="emaillogin" type="email" required>
+                          <br><br>
+                          Password:
+                          <input id="passlogin" type="password" required>
+                          <br><br>
+                          <input type="submit" value="Login">
+                        </form>
+            
+            
+                      </div>
+                    </div>
+            
     <div class="container">
         <div id="sideNavBox">
             <div id="sideNav">
@@ -46,8 +113,10 @@
                     </a>
                 </div>
                 <div id="chats-icon" class="tooltip">
-                    <img class="sideNav-icon" src="./images/speech-bubble.svg">
-                    <span class="tooltiptext">chats</span>
+                    <a href="chat.html">
+                        <img class="sideNav-icon" src="./images/speech-bubble.svg">
+                        <span class="tooltiptext">chats</span>
+                    </a>
                 </div>
                 <div id="task-icon" class="tooltip">
                     <a href="task.html">
@@ -80,20 +149,31 @@
                         <div class="chatIcon">
                             <img src="./images/User.png">
                         </div>
-                        <div class="chatName"></div>
+                        <div class="chatName"> 
+                            <p>Danial</p></div>
                     </div>
                     <div class="chatPreview">
                         <div class="chatIcon">
                             <img src="./images/User.png">
                         </div>
-                        <div class="chatName"></div>
+                        <div class="chatName">
+                            <p>Jack</p>
+                        </div>
                     </div>
 
                 </div>
             <!-- </div> -->
         </div>
         <div id="chatWindow">
-            <div id="chatWindowTop"></div>
+            <div id="chatWindowTop">
+                <p>Danial</p>
+                <div id="extension">
+                    <div class="tooltip">
+                        <img src="./images/round-add-button.svg">
+                        <span id="disBellow" class="tooltiptext">More options</span>
+                    </div>
+                </div>
+            </div>
             <div id="chatWindowMainBox">
                 <div id="chatWindowMain">
                     <div id="chatHistory">
@@ -102,17 +182,13 @@
                             <p>Hello. How are you today?</p>
                             <span class="time-right">11:00</span>
                         </div>
-
-                        
                     </div>
-
-
                     <div class="newChat">
                         <input type="textarea" id="chat" placeholder="Type your message here"/>
                         <input type="button" value="Send" onclick="sendMessage()">
                      </div>
                 </div>
-                <div id="chatWindowRightBar"></div>
+                <!-- <div id="chatWindowRightBar"></div> -->
             </div>
         </div>
     </div>
@@ -129,10 +205,10 @@
             </a>
             <a href="https://www.instagram.com">
                 <img class="instagram-img" src="images/instagram.png" alt="Instagram logo" >
-            </a>>
+            </a>
         </div>
         </div>
-    </footer>>
+    </footer>
 
 
 </body>
