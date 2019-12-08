@@ -10,28 +10,26 @@
     <script src="js/Javascript.js"></script>
   </head>
   <body >
-        <div class="fixed-header">
-                <div class="block_container">
-                  <div id="bloc1">
-                    <img class="logo" id="logo" src ="images/User.png" alt="User logo">
-                  </div>
-                  <div id="bloc2">
-                    <ul class = "list_header2" id="username">
-                        <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
+            <div class="fixed-header">
+              <div class="block_container">
+
+                <div id="bloc1">
+                  <img class="logo1" src ="images/logo.png" alt="Company logo">
+                  <img class="logo" id="logo" src ="images/User.png" alt="User logo">
+                </div>
+                <div id="bloc2">
+                  <ul class = "list_header2" id="username">
+                      <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
+                    </ul>
+                    <ul class = "list_header">
+                        <li class="list"><a href="index.html"  class="top_text">Home</a></li>
+                        <li class="list"><a href="task.html" class="top_text">Task Dashboard</a></li>
+                        <li class="list"><a href="chat.html" class="top_text">Chats</a></li>
+                        <li class="list"><a href="#logout" id="logout" onclick="logout()" class="top_text">Log Out</a></li>
                       </ul>
-                      <ul class = "list_header" id="header1">
-                          <li class="list"><a href="index.html"  class="top_text">Home</a></li>
-                          <li class="list"><a href="task.html" class="top_text">Task Dashboard</a></li>
-                          <li class="list"><a href="chat.html" class="top_text">Chats</a></li>
-                          <li class="list"><a href="#logout" id="logout" onclick="logout()" class="top_text">Log Out</a></li>
-                        </ul>
-                        <ul class = "list_header" id="header2">
-                            <li class="list"><a href="#login" onclick="login()" class="top_text">Login</a></li>
-                            <li class="list"><a href="#register" onclick="register()" class="top_text">Register</a></li>
-                        </ul>
-                  </div>
                 </div>
               </div>
+            </div>
                     <div id="register" class="register">
                       <div class="register-form">
                         <form onsubmit="checkCookie()">
