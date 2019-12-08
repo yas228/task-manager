@@ -46,6 +46,7 @@
       document.getElementById("logo").src="images/User.png";
       localStorage.setItem("logged", "false");
       alert("You logged out correctly");
+      window.location.replace("index.html");
   }
   function login(){
     document.getElementById("login").style.display="block";
