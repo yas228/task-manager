@@ -51,7 +51,7 @@
       alert("You logged out correctly");
   }
   function logout1(){
-      window.location.href("index.html");
+      window.location.replace("index.html");
       alert("You logged out correctly");
       logout();
   }
