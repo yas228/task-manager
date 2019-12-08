@@ -51,8 +51,7 @@
       alert("You logged out correctly");
   }
   function logout1(){
-      window.location.replace("index.html");
-      localStorage.setItem("logged", "false");
+      window.location.href("index.html");
       alert("You logged out correctly");
       logout();
   }
