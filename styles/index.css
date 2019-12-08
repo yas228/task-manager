@@ -23,6 +23,9 @@ body{
 #welcome1{
   display: none;
 }
+#logo{
+  display: none;
+}
 /*****HEADER***/
 
 body{
