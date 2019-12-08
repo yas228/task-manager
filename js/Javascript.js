@@ -52,6 +52,7 @@
   }
   function logout1(){
       window.location.replace("index.html");
+      localStorage.setItem("logged", "false");
       logout();
   }
   function login(){
