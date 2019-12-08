@@ -54,7 +54,7 @@
       document.getElementById("header1").style.display="none";
       document.getElementById("header2").style.display="inline-block";
       document.getElementById("username").style.display="none";
-      document.getElementById("logo").src="images/User.png";
+      document.getElementById("logo").style.display="none";
       localStorage.setItem("logged", "false");
       alert("You logged out correctly");
       window.location.replace("index.html");
