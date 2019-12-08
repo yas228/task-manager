@@ -148,3 +148,25 @@
   }
 
   checkLogin();
+
+
+
+  function sendMessage(){
+    var chat = document.getElementById("chat").value;
+    var date = new Date();
+
+    var chatHistory = document.getElementById("chatHistory").lastElementChild;
+    chatHistory.insertAdjacentHTML ('afterend',
+      "<div class=\"chatContainer darker\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"right\" style=\"width:100%;\"><p>"
+      +chat+"</p><span class=\"time-left\">"+date.getHours()+":"+date.getMinutes()+"</span></div>"
+    )
+    setTimeout(function(){
+      chatHistory = document.getElementById("chatHistory").lastElementChild;
+      chatHistory.insertAdjacentHTML ('afterend',
+      "<div class=\"chatContainer\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"left\" style=\"width:100%;\"><p>Sweet! So, what do you wanna do today?</p><span class=\"time-right\">"+date.getHours()+":"+date.getMinutes()+"</span></div>");
+  }, 2000);
+ 
+   document.getElementById("chat").value = "";
+
+
+  }

@@ -35,76 +35,7 @@
             </div>
         </div>
     </div>
-    <div id="register" class="register">
-      <div class="register-form">
-        <form onsubmit="checkCookie()">
-          Username:
-          <input id="user" type="text"  required>
-          <br><br>
-          Password:
-          <input id="pass" type="password" pattern="[a-z0-9.-]{1,}" required>
-          <br><br>
-          Name:
-          <input id="name" type="text" required>
-          <br></br>
-          Surname:
-          <input id="surname" type="text" required>
-          <br><br>
-          Email:
-          <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-          <br><br>
-          Image URL:
-          <input id="img" type="text" >
-          <br><br>
-          Date of Birth:
-          <input id="birth" type="Date" required>
-          <br><br>
-          Interests:
-          <select id="interests">
-            <option ></option>
-            <option >Computer Science</option>
-            <option >Videogames</option>
-            <option >Art</option>
-            <option >Cooking</option>
-          </select>
-          <br><br>
-          Language:
-          <select id="languages">
-            <option ></option>
-            <option >English</option>
-            <option >Spanish</option>
-            <option >German</option>
-            <option >French</option>
-          </select>
-          <br><br>
-          Your purpose:
-          <input id="purpose" type="text" >
-          <br><br>
-          <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
-          <br><br>
-          <input type="submit" value="Save">
-          <input onclick="deleteform()" type="reset" value="Delete">
-        </form>
 
-
-      </div>
-    </div>
-
-    <div id="login" class="login">
-      <div class="login-form">
-        <form onsubmit="checkLoginCookie()">
-          Email:
-          <input id="emaillogin" type="email" required>
-          <br><br>
-          Password:
-          <input id="passlogin" type="password" required>
-          <br><br>
-          <input type="submit" value="Login">
-        </form>
-
-
-      </div>
-    </div>
     <div class="container">
         <div id="sideNavBox">
             <div id="sideNav">
@@ -157,13 +88,30 @@
                         </div>
                         <div class="chatName"></div>
                     </div>
+
                 </div>
             <!-- </div> -->
         </div>
         <div id="chatWindow">
             <div id="chatWindowTop"></div>
             <div id="chatWindowMainBox">
-                <div id="chatWindowMain"></div>
+                <div id="chatWindowMain">
+                    <div id="chatHistory">
+                        <div class="chatContainer">
+                            <img src="./images/User.png" alt="Avatar" style="width:100%;">
+                            <p>Hello. How are you today?</p>
+                            <span class="time-right">11:00</span>
+                        </div>
+
+                        
+                    </div>
+
+
+                    <div class="newChat">
+                        <input type="textarea" id="chat" placeholder="Type your message here"/>
+                        <input type="button" value="Send" onclick="sendMessage()">
+                     </div>
+                </div>
                 <div id="chatWindowRightBar"></div>
             </div>
         </div>
@@ -175,16 +123,16 @@
         <div class="social">
             <a href="https://www.facebook.com">
                  <img class="facebook-img" src="images/facebook.png" alt="Facebook logo" >
-            <a/>
+            </a>
             <a href="https://www.twitter.com">
                 <img class="twitter-img" src="images/twitter.png" alt="Twitter logo" >
-            <a/>
+            </a>
             <a href="https://www.instagram.com">
                 <img class="instagram-img" src="images/instagram.png" alt="Instagram logo" >
-            <a/>
+            </a>>
         </div>
         </div>
-    <footer/>
+    </footer>>
 
 
 </body>
