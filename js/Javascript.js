@@ -15,6 +15,7 @@
       document.getElementById("welcome0").style.display="none";
       document.getElementById("username").style.display="inline-block";
       document.getElementById("logo").style.display="inline-block";
+      document.getElementById("logo").src=localStorage.getItem("logo");
     }
      else{
       document.getElementById("header1").style.display="none";
@@ -129,6 +130,7 @@
        document.getElementById("welcome0").style.display="none";
        document.getElementById("username").style.display="inline-block";
        if(content[3]!=""){
+         localStorage.setItem("logo", content[3]);
          document.getElementById("logo").src=content[3];
        }
        localStorage.setItem("logged", "true");
