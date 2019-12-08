@@ -53,6 +53,7 @@
   function logout1(){
       window.location.replace("index.html");
       localStorage.setItem("logged", "false");
+      alert("You logged out correctly");
       logout();
   }
   function login(){
