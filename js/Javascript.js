@@ -133,6 +133,9 @@
          localStorage.setItem("logo", content[3]);
          document.getElementById("logo").src=content[3];
        }
+      else{
+        localStorage.setItem("logo", "images/User.png");
+      }
        localStorage.setItem("logged", "true");
        alert("You have logged in correctly!");
      }
