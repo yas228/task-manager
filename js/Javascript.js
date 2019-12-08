@@ -29,13 +29,12 @@
   function logged(){
       document.getElementById("HeaderUsername").innerHTML= localStorage.getItem("username");
       document.getElementById("wusername").innerHTML= localStorage.getItem("username");
-      document.getElementById("login").style.display="none";
       document.getElementById("header1").style.display="inline-block";
       document.getElementById("welcome1").style.display="inline-block";
-      document.getElementById("body").style.display="flex";
       document.getElementById("header2").style.display="none";
-      document.getElementById("welcome0").style.display="none";
       document.getElementById("username").style.display="inline-block";
+      document.getElementById("wusername").style.display="inline-block";
+      document.getElementById("HeaderUsername").style.display="inline-block";
       document.getElementById("logo").style.display="inline-block";
 }
   function deleteform(){
