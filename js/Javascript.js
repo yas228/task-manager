@@ -17,7 +17,9 @@
     document.getElementById(document.getElementById("projectid").value).innerHTML= document.getElementById("newname").value;
     document.getElementById("edit").style.display="none";
   }
-
+  function showPerson(elem){
+    document.getElementById("chatwith").innerHTML=elem;
+  }
   function hide_all(){
     hideProject("tasks_project_1");
     hideProject("tasks_project_2");

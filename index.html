@@ -114,7 +114,7 @@
       </div>
     <div class="body_section" id="body" >
 
-    <div class="vertical1" id="column1">
+    <div class="vertical1">
       <div>
             <h2 class="text-title-left">Welcome to our company!</h2>
       </div>
@@ -130,7 +130,7 @@
 
       </div>
       </div>
-      <div class="vertical2" id="column1">
+      <div class="vertical2">
             <video width="100%" height="50%" autoplay>
               <source src="images/demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -185,14 +185,14 @@
                                 <img src="./images/User.png">
                             </div>
                             <div class="chatName">
-                                <p>Danial</p></div>
+                                <p onclick="showPerson('Danial')">Danial</p></div>
                         </div>
                         <div class="chatPreview">
                             <div class="chatIcon">
                                 <img src="./images/User.png">
                             </div>
                             <div class="chatName">
-                                <p>Jack</p>
+                                <p onclick="showPerson('Jack')">Jack</p>
                             </div>
                         </div>
 
@@ -201,7 +201,7 @@
             </div>
             <div id="chatWindow">
                 <div id="chatWindowTop">
-                    <p>Danial</p>
+                    <p id="chatwith">Danial</p>
                     <div id="extension">
                         <div class="tooltip">
                             <img src="./images/round-add-button.svg">
