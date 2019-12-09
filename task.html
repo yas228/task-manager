@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/task.css">
     <script src="js/Javascript.js"></script>
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+          $( function() {
+            $( "#tasks_project_1" ).sortable();
+            $( "#tasks_project_1" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_2" ).sortable();
+            $( "#tasks_project_2" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_3" ).sortable();
+            $( "#tasks_project_3" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_4" ).sortable();
+            $( "#tasks_project_4" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_5" ).sortable();
+            $( "#tasks_project_5" ).disableSelection();
+            } );
+    </script>
+
   </head>
   <body >
     <div class="fixed-header">
@@ -88,7 +112,7 @@
                         I am a project 1
                     </h3>
                     <div class="setting-project-icon">
-                        <img onclick="showEdit('project1')" src="images/edit.png" class="project-icon1">
+                        <img onclick="showEdit('project1')" src="images/round-add-button.svg" class="project-icon1">
                     </div>
                     <div class="setting-project-icon">
                             <a  onclick="hideColumn('column1')" class="project-icon" style="color:black"> &times;</a>
@@ -100,7 +124,7 @@
                     I am a project 2
                 </h3>
                 <div class="setting-project-icon">
-                    <img onclick="showEdit('project2')" src="images/edit.png" class="project-icon1">
+                    <img onclick="showEdit('project2')" src="images/round-add-button.svg" class="project-icon1">
                 </div>
                 <div class="setting-project-icon">
                         <a  onclick="hideColumn('column2')" class="project-icon" style="color:black"> &times;</a>
@@ -112,7 +136,7 @@
                 I am a project 3
             </h3>
             <div class="setting-project-icon">
-                <img onclick="showEdit('project3')" src="images/edit.png" class="project-icon1">
+                <img onclick="showEdit('project3')" src="images/round-add-button.svg" class="project-icon1">
             </div>
             <div class="setting-project-icon">
                     <a  onclick="hideColumn('column3')" class="project-icon" style="color:black"> &times;</a>
@@ -124,7 +148,7 @@
                     I am a project 4
                 </h3>
                 <div class="setting-project-icon">
-                    <img onclick="showEdit('project4')" src="images/edit.png" class="project-icon1">
+                    <img onclick="showEdit('project4')" src="images/round-add-button.svg" class="project-icon1">
                 </div>
                 <div class="setting-project-icon">
                         <a  onclick="hideColumn('column4')" class="project-icon" style="color:black"> &times;</a>
@@ -136,7 +160,7 @@
                 I am a project 5
             </h3>
             <div class="setting-project-icon">
-                <img onclick="showEdit('project5')" src="images/edit.png" class="project-icon1">
+                <img onclick="showEdit('project5')" src="images/round-add-button.svg" class="project-icon1">
             </div>
             <div class="setting-project-icon">
                     <a  onclick="hideColumn('column5')" class="project-icon" style="color:black"> &times;</a>
@@ -173,7 +197,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task1_1')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task1_1')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -194,7 +218,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task1_2')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task1_2')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -215,7 +239,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task1_3')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task1_3')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -239,7 +263,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task2_1')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task2_1')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -260,7 +284,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task2_2')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task2_2')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -281,7 +305,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task2_3')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task2_3')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -305,7 +329,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task3_1')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task3_1')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -326,7 +350,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task3_2')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task3_2')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -347,7 +371,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task3_3')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task3_3')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -371,7 +395,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task4_1')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task4_1')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -392,7 +416,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task4_2')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task4_2')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -413,7 +437,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task4_3')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task4_3')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -437,7 +461,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task5_1')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task5_1')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -458,7 +482,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task5_2')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task5_2')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -479,7 +503,7 @@
                             </h4>
                         </div>
                         <div class="task_hamburguer">
-                            <img href=# onclick="hideColumn('task5_3')" src="images/edit.png" class="task-icon1">
+                            <img href=# onclick="hideColumn('task5_3')" src="images/round-add-button.svg" class="task-icon1">
                         </div>
                     </div>
                 </div>
@@ -488,9 +512,11 @@
 
 
             <div class="task_creator">
-                <input type="textarea" id="new_task_name" placeholder="Type your task name here">
-                <input type="textarea" id="new_task_description" placeholder="Type your task description here">
-                <input type="button" value="Send" onclick="newTask()">
+                <div class="inputs">
+                        <input type="textarea" class="input_name" id="new_task_name" placeholder="Type your task name here">
+                        <input type="textarea" class="input_description" id="new_task_description" placeholder="Type your task description here">
+                </div>
+                <input type="button" class="input_button" value="Send" onclick="newTask()">
             </div>
             
         </div>

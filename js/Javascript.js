@@ -100,7 +100,7 @@
     n_div = $("#"+my_id+" > div").length + 1;
     my_new_task_id="task" + b + "_" + n_div;
     var taskHistory = document.getElementById(my_id).lastElementChild;
-    taskHistory.insertAdjacentHTML("afterend",'<div id="'+my_new_task_id +'" class="task"><div class="task_container"><div class="tick"><input type="checkbox" value="Option 1" name="option_1" id="option_1" /></div><div class="task_name">'+name+'</h4></div><div class="task_description"><h4 class="text_task_description">'+description+'</h4></div><div class="task_hamburguer"><img href=# onclick="hideColumn('+"'"+my_new_task_id+"'"+')" src="images/edit.png" class="task-icon1"></div></div></div>');
+    taskHistory.insertAdjacentHTML("afterend",'<div id="'+my_new_task_id +'" class="task"><div class="task_container"><div class="tick"><input type="checkbox" value="Option 1" name="option_1" id="option_1" /></div><div class="task_name">'+name+'</h4></div><div class="task_description"><h4 class="text_task_description">'+description+'</h4></div><div class="task_hamburguer"><img href=# onclick="hideColumn('+"'"+my_new_task_id+"'"+')" src="images/round-add-button.svg" class="task-icon1"></div></div></div>');
 
     
   }

@@ -308,6 +308,32 @@ img.task-icon1{
 
 }
 
+div.task_creator{
+  background: rgb(54, 54, 54);
+    height: 7%;
+    border: 1px solid #e4e4e4;
+  position: absolute;
+  bottom: 2%;
+  width: 73%;
+}
+
+
+
+input.input_name{
+  float:left;
+  width: 20%;
+}
+
+input.input_description{
+  float:right;
+  width: 80%;
+}
+
+input.input_button{
+  width: 100%;
+}
+
+
 #tasks_project_2{
   display:none;
 }
