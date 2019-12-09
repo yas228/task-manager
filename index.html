@@ -6,7 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/chat.css">
+    <link rel="stylesheet" href="styles/task.css">
+    <link rel="stylesheet" href="styles/check_box.css">
     <script src="js/Javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+          $( function() {
+            $( "#tasks_project_1" ).sortable();
+            $( "#tasks_project_1" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_2" ).sortable();
+            $( "#tasks_project_2" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_3" ).sortable();
+            $( "#tasks_project_3" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_4" ).sortable();
+            $( "#tasks_project_4" ).disableSelection();
+            } );
+            $( function() {
+            $( "#tasks_project_5" ).sortable();
+            $( "#tasks_project_5" ).disableSelection();
+            } );
+    </script>
   </head>
   <body  onload="checkLogin()">
 
@@ -23,9 +50,9 @@
             <li class="list2"><h2 id="HeaderUsername" class="top_text">sergio_garcia</h2></li>
           </ul>
           <ul class = "list_header" id="header1">
-              <li class="list"><a href="index.html"  class="top_text">Home</a></li>
-              <li class="list"><a href="task.html" class="top_text">Task Dashboard</a></li>
-              <li class="list"><a href="chat.html" class="top_text">Chats</a></li>
+              <li class="list"><a href="#index"  onclick="showIndex()" class="top_text">Home</a></li>
+              <li class="list"><a href="#task" onclick="showTask()" class="top_text">Task Dashboard</a></li>
+              <li class="list"><a href="#chat" onclick="showChat()" class="top_text">Chats</a></li>
               <li class="list"><a href="#logout" id="logout" onclick="logout()" class="top_text">Log Out</a></li>
             </ul>
             <ul class = "list_header" id="header2">
@@ -110,7 +137,7 @@
           </div>
         </div>
 
-<div class="body_section" id="body" >
+    <div class="body_section" id="body" >
 
     <div class="vertical1" id="column1">
       <div>
@@ -136,7 +163,549 @@
         </div>
 
         </div>
-          <div class="company">
+        <div class="containerchat" id="showchat">
+            <div id="sideNavBox">
+                <div id="sideNav">
+                    <div id="project-icon" class="tooltip">
+                        <a>
+                            <img class="sideNav-icon" src="./images/layers.svg">
+                            <span class="tooltiptext">projects</span>
+                        </a>
+                    </div>
+                    <div id="chats-icon" class="tooltip">
+                        <a href="#chat" onclick="showChat()">
+                            <img class="sideNav-icon" src="./images/speech-bubble.svg">
+                            <span class="tooltiptext">chats</span>
+                        </a>
+                    </div>
+                    <div id="task-icon" class="tooltip">
+                        <a href="#task" onclick="showTask()">
+                            <img class="sideNav-icon" src="./images/list.svg">
+                            <span class="tooltiptext">tasks</span>
+                        </a>
+                    </div>
+                    <div id="notification-icon" class="tooltip">
+                        <img class="sideNav-icon" src="images/bell.svg">
+                        <span class="tooltiptext">notification</span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="contactList">
+                <!-- <div id="contactBox"> -->
+                    <div id="contactTop">
+                        <ul>
+                            <li id="contactTop-icon">
+                                <img src="images/speech-bubble.svg">
+                            </li>
+                            <li id="contactTop-text">
+                                Chats
+                            </li>
+                            <li id="addChat-icon"></li>
+                        </ul>
+                    </div>
+                    <div id="chatList">
+                        <div class="chatPreview">
+                            <div class="chatIcon">
+                                <img src="./images/User.png">
+                            </div>
+                            <div class="chatName">
+                                <p>Danial</p></div>
+                        </div>
+                        <div class="chatPreview">
+                            <div class="chatIcon">
+                                <img src="./images/User.png">
+                            </div>
+                            <div class="chatName">
+                                <p>Jack</p>
+                            </div>
+                        </div>
+
+                    </div>
+                <!-- </div> -->
+            </div>
+            <div id="chatWindow">
+                <div id="chatWindowTop">
+                    <p>Danial</p>
+                    <div id="extension">
+                        <div class="tooltip">
+                            <img src="./images/round-add-button.svg">
+                            <span id="disBellow" class="tooltiptext">More options</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="chatWindowMainBox">
+                    <div id="chatWindowMain">
+                        <div id="chatHistory">
+                            <div class="chatContainer">
+                                <img src="./images/User.png" alt="Avatar" style="width:100%;">
+                                <p>Hello. How are you today?</p>
+                                <span class="time-right">11:00</span>
+                            </div>
+                        </div>
+                        <div class="newChat">
+                                <input type="textarea" id="chat" placeholder="Type your message here"/>
+                                <input type="button" value="Send" onclick="sendMessage()">
+                         </div>
+                    </div>
+                    <!-- <div id="chatWindowRightBar"></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="containertask" id="showtask">
+            <div id="sideNavBox">
+                <div id="sideNav">
+                  <div id="project-icon" class="tooltip">
+                      <a>
+                          <img class="sideNav-icon" src="./images/layers.svg">
+                          <span class="tooltiptext">projects</span>
+                      </a>
+                  </div>
+                  <div id="chats-icon" class="tooltip">
+                      <a href="#chat" onclick="showChat()">
+                          <img class="sideNav-icon" src="./images/speech-bubble.svg">
+                          <span class="tooltiptext">chats</span>
+                      </a>
+                  </div>
+                  <div id="task-icon" class="tooltip">
+                      <a href="#task" onclick="showTask()">
+                          <img class="sideNav-icon" src="./images/list.svg">
+                          <span class="tooltiptext">tasks</span>
+                      </a>
+                  </div>
+                    <div id="notification-icon" class="tooltip">
+                        <img class="sideNav-icon" src="images/bell.svg">
+                        <span class="tooltiptext">projects</span>
+                    </div>
+
+                </div>
+            </div>
+            <div id="projectList">
+              <div class="project-conteiner">
+                <div class="project-header">
+                    <div class="div-project-icon">
+                            <img class="project-icon" src="./images/layers.svg">
+                    </div>
+
+                    <h3 class="project-header-title">
+                        PROJECTS
+                    </h3>
+                </div>
+                <div class="project-individual" id="column1" onclick="hide_and_show('tasks_project_1','project1')">
+                        <h3 id="project1" class="project-header-title">
+                            I am a project 1
+                        </h3>
+                        <div class="setting-project-icon">
+                            <img onclick="showEdit('project1')" src="images/edit.png" class="project-icon1">
+                        </div>
+                        <div class="setting-project-icon">
+                                <a  onclick="hideColumn('column1')" class="project-icon" href="#" style="text-decoration: none"> &times;</a>
+                        </div>
+
+                </div>
+                <div class="project-individual" id="column2" onclick="hide_and_show('tasks_project_2','project2')">
+                    <h3 id="project2" class="project-header-title">
+                        I am a project 2
+                    </h3>
+                    <div class="setting-project-icon">
+                        <img onclick="showEdit('project2')" src="images/edit.png" class="project-icon1">
+                    </div>
+                    <div class="setting-project-icon">
+                            <a  onclick="hideColumn('column2')" class="project-icon" href="#" style="text-decoration: none"> &times;</a>
+                    </div>
+
+            </div>
+            <div class="project-individual" id="column3" onclick="hide_and_show('tasks_project_3','project3')">
+                <h3 id="project3" class="project-header-title">
+                    I am a project 3
+                </h3>
+                <div class="setting-project-icon">
+                    <img onclick="showEdit('project3')" src="images/edit.png" class="project-icon1">
+                </div>
+                <div class="setting-project-icon">
+                        <a  onclick="hideColumn('column3')" class="project-icon" href="#" style="text-decoration: none"> &times;</a>
+                </div>
+
+                </div>
+                <div class="project-individual" id="column4" onclick="hide_and_show('tasks_project_4','project4')">
+                    <h3 id="project4" class="project-header-title">
+                        I am a project 4
+                    </h3>
+                    <div class="setting-project-icon">
+                        <img onclick="showEdit('project4')" src="images/edit.png" class="project-icon1">
+                    </div>
+                    <div class="setting-project-icon">
+                            <a  onclick="hideColumn('column4')" class="project-icon" href="#" style="text-decoration: none"> &times;</a>
+                    </div>
+
+            </div>
+            <div class="project-individual" id="column5" onclick="hide_and_show('tasks_project_5','project5')">
+                <h3 id="project5" class="project-header-title">
+                    I am a project 5
+                </h3>
+                <div class="setting-project-icon">
+                    <img onclick="showEdit('project5')" src="images/edit.png" class="project-icon1">
+                </div>
+                <div class="setting-project-icon">
+                        <a  onclick="hideColumn('column5')" class="project-icon" href="#" style="text-decoration: none"> &times;</a>
+                </div>
+
+            </div>
+              </div>
+            </div>
+            <div id="projectWindow">
+                <div class="project-header2">
+
+                    <div class="project-header-title2-container">
+                        <h3 class="project-header-title2" id="title_of_project">
+                           I am a project 1
+                         </h3>
+                    </div>
+
+                </div>
+                <div id ="tasks_project_1">
+                    <div id="task1_1" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name1_1
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 1
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task1_1')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task1_2" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name1_2
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 2
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task1_2')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task1_3" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name1_3
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 3
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task1_3')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id ="tasks_project_2">
+                    <div id="task2_1" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name2_1
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 1
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task2_1')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task2_2" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name2_2
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 2
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task2_2')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task2_3" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name2_3
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 3
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task2_3')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id ="tasks_project_3">
+                    <div id="task3_1" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name3_1
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 1
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task3_1')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task3_2" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name3_2
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 2
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task3_2')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task3_3" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name3_3
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 3
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task3_3')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id ="tasks_project_4">
+                    <div id="task4_1" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name4_1
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 1
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task4_1')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task4_2" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name4_2
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 2
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task4_2')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task4_3" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name4_3
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 3
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task4_3')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id ="tasks_project_5">
+                    <div id="task5_1" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name5_1
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 1
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task5_1')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task5_2" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name5_2
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 2
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task5_2')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="task5_3" class="task">
+                        <div class="task_container">
+                            <div class="tick">
+                                <input type="checkbox" value="Option 1" name="option_1" id="option_1" />
+
+                            </div>
+                            <div class="task_name">
+                                <h4 class="text_task_name">
+                                    Name5_3
+                                </h4>
+                            </div>
+                            <div class="task_description">
+                                <h4 class="text_task_description">
+                                    Description 3
+                                </h4>
+                            </div>
+                            <div class="task_hamburguer">
+                                <img href="#" style="text-decoration: none" onclick="hideColumn('task5_3')" src="images/round-add-button.svg" class="task-icon1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="task_creator">
+                    <div class="inputs">
+                            <input type="textarea" class="input_name" id="new_task_name" placeholder="Type your task name here">
+                            <input type="textarea" class="input_description" id="new_task_description" placeholder="Type your task description here">
+                    </div>
+                    <input type="button" class="input_button" value="Send" onclick="newTask()">
+                </div>
+
+            </div>
+            </div>
+          <div class="company" id="companylogo">
           <img class="img" src="images/company.jpg">
         </div>
       <footer class="footer-align">
