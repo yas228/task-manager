@@ -115,7 +115,8 @@
   }
   function showIndex(){
     document.getElementById("showchat").style.display="none";
-    document.getElementById("companylogo").style.display="inline";
+    document.getElementById("showtask").style.display="none";
+    document.getElementById("companylogo").style.display="grid";
     document.getElementById("body").style.display="flex";
     checkLogin();
   }
