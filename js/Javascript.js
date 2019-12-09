@@ -5,10 +5,6 @@
   var logged = localStorage.getItem("logged");
 
 
-
-
-  //////NEW FOR DAVID//////////////////////////////////////////////////////////
-
   function showhambur(elem){
     document.getElementById(elem).style.display="block";
   }
@@ -41,7 +37,7 @@
     document.getElementById("title_of_project").innerHTML= document.getElementById(elem2).innerHTML;
   }
 
-  
+
   function hideColumn (elem) {
       if(confirm("¿Are you sure you want to remove it?")){
       document.getElementById(elem).style.display="none";
@@ -75,7 +71,7 @@
       chatHistory.insertAdjacentHTML ('afterend',
       "<div class=\"chatContainer\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"left\" style=\"width:100%;\"><p>Sweet! So, what do you wanna do today?</p><span class=\"time-right\">"+date.getHours()+":"+date.getMinutes()+"</span></div>");
   }, 2000);
- 
+
    document.getElementById("chat").value = "";
 
 
@@ -102,28 +98,37 @@
     var taskHistory = document.getElementById(my_id).lastElementChild;
     taskHistory.insertAdjacentHTML("afterend",'<div id="'+my_new_task_id +'" class="task"><div class="task_container"><div class="tick"><input type="checkbox" value="Option 1" name="option_1" id="option_1" /></div><div class="task_name">'+name+'</h4></div><div class="task_description"><h4 class="text_task_description">'+description+'</h4></div><div class="task_hamburguer"><img href=# onclick="hideColumn('+"'"+my_new_task_id+"'"+')" src="images/round-add-button.svg" class="task-icon1"></div></div></div>');
 
-    
+
+  }
+
+  function showChat(){
+    document.getElementById("showchat").style.display="grid";
+    document.getElementById("showtask").style.display="none";
+    document.getElementById("body").style.display="none"
+    document.getElementById("companylogo").style.display="none";
+  }
+  function showTask(){
+    document.getElementById("showtask").style.display="grid";
+    document.getElementById("showchat").style.display="none";
+    document.getElementById("body").style.display="none"
+    document.getElementById("companylogo").style.display="none";
+  }
+  function showIndex(){
+    document.getElementById("showchat").style.display="none";
+    document.getElementById("companylogo").style.display="inline";
+    document.getElementById("body").style.display="flex";
+    checkLogin();
   }
 
 
-
-    ///////////////////////////////////////////////////
-
-
-
-
-
-
-
-
   function checkLogin(){
+    var logged = localStorage.getItem("logged");
     if(logged=="true"){
       document.getElementById("HeaderUsername").innerHTML= localStorage.getItem("username");
       document.getElementById("wusername").innerHTML= localStorage.getItem("username");
       document.getElementById("login").style.display="none";
       document.getElementById("header1").style.display="inline-block";
       document.getElementById("welcome1").style.display="inline-block";
-      document.getElementById("body").style.display="flex";
       document.getElementById("header2").style.display="none";
       document.getElementById("welcome0").style.display="none";
       document.getElementById("username").style.display="inline-block";
@@ -154,20 +159,11 @@
 
   }
   function logout(){
-      document.getElementById("header1").style.display="none";
-      document.getElementById("header2").style.display="inline-block";
-      document.getElementById("username").style.display="none";
-      document.getElementById("logo").style.display="none";
-      document.getElementById("welcome1").style.display="none";
-      document.getElementById("welcome0").style.display="inline-block";
       localStorage.setItem("logged", "false");
+      showIndex();
       alert("You logged out correctly");
   }
-  function logout1(){
-      window.location.replace("index.html");
-      alert("You logged out correctly");
-      logout();
-  }
+
   function login(){
     document.getElementById("login").style.display="block";
   }
@@ -291,7 +287,7 @@
       chatHistory.insertAdjacentHTML ('afterend',
       "<div class=\"chatContainer\"><img src=\"./images/User.png\" alt=\"Avatar\" class=\"left\" style=\"width:100%;\"><p>Sweet! So, what do you wanna do today?</p><span class=\"time-right\">"+date.getHours()+":"+date.getMinutes()+"</span></div>");
   }, 2000);
- 
+
    document.getElementById("chat").value = "";
 
 
