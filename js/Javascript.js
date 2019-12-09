@@ -149,14 +149,9 @@
   function deleteform(){
       document.getElementById("user").value="";
       document.getElementById("name").value="";
-      document.getElementById("surname").value="";
+      document.getElementById("img").value="";
       document.getElementById("email").value="";
       document.getElementById("pass").value="";
-      document.getElementById("birth").value="";
-      document.getElementById("terms").value="";
-      document.getElementById("purpose").value="";
-      document.getElementById("interests").value="";
-      document.getElementById("languages").value="";
 
   }
   function logout(){
@@ -199,7 +194,7 @@
   function checkCookie() { //check cookie on register and set it if it does not exist
        cookie=getCookie(document.getElementById("email").value);
        if(cookie==""){
-         cookieContent = document.getElementById("email").value+","+document.getElementById("pass").value+","+document.getElementById("user").value+","+document.getElementById("img").value+","+document.getElementById("name").value+","+document.getElementById("surname").value+","+document.getElementById("birth").value+","+document.getElementById("interests").value+","+document.getElementById("languages").value+","+document.getElementById("purpose").value;
+         cookieContent = document.getElementById("email").value+","+document.getElementById("pass").value+","+document.getElementById("user").value+","+document.getElementById("img").value+","+document.getElementById("name").value;
          setCookie(document.getElementById("email").value, cookieContent, 5);
          deleteform();
          document.getElementById("register").style.display="none";
@@ -264,6 +259,9 @@
     }
     if (event.target == login) {
       login.style.display = "none";
+    }
+    if (event.target == edit) {
+      edit.style.display = "none";
     }
 
 
