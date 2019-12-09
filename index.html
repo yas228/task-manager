@@ -69,88 +69,50 @@
         <div id="register" class="register">
           <div class="register-form">
             <form onsubmit="checkCookie()">
-              Username:
-              <input id="user" type="text"  required>
+              <input class="input-form" id="user" type="text" placeholder="username" required>
               <br><br>
-              Password:
-              <input id="pass" type="password" pattern="[a-z0-9.-]{1,}" required>
+              <input class="input-form" id="pass" type="password" placeholder="password" pattern="[a-z0-9.-]{1,}" required>
               <br><br>
-              Name:
-              <input id="name" type="text" required>
+              <input class="input-form" id="name" type="text" placeholder="name" required>
               <br></br>
-              Surname:
-              <input id="surname" type="text" required>
+              <input class="input-form" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email address" required>
               <br><br>
-              Email:
-              <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+              <input class="input-form" id="img" placeholder="image URL" type="text" >
               <br><br>
-              Image URL:
-              <input id="img" type="text" >
+              <input id="button" onclick="deleteform()" type="reset" value="Delete">
               <br><br>
-              Date of Birth:
-              <input id="birth" type="Date" required>
-              <br><br>
-              Interests:
-              <select id="interests">
-                <option ></option>
-                <option >Computer Science</option>
-                <option >Videogames</option>
-                <option >Art</option>
-                <option >Cooking</option>
-              </select>
-              <br><br>
-              Language:
-              <select id="languages">
-                <option ></option>
-                <option >English</option>
-                <option >Spanish</option>
-                <option >German</option>
-                <option >French</option>
-              </select>
-              <br><br>
-              Your purpose:
-              <input id="purpose" type="text" >
-              <br><br>
-              <input id="terms" type="checkbox" required>I have read and accepted the Terms of Use.<br>
-              <br><br>
-              <input type="submit" value="Save">
-              <input onclick="deleteform()" type="reset" value="Delete">
+              <input id="button" type="submit" value="Register">
+              <br>
             </form>
-
-
           </div>
         </div>
 
-        <div id="login" class="login">
-          <div class="login-form">
+        <div id="login" class="register">
+          <div class="register-form" >
             <form onsubmit="checkLoginCookie()">
-              Email:
-              <input id="emaillogin" type="email" required>
+              <input class="input-form" id="emaillogin" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="email address" required>
               <br><br>
-              Password:
-              <input id="passlogin" type="password" required>
+              <input class="input-form" id="passlogin" type="password" placeholder="password" pattern="[a-z0-9.-]{1,}" required>
               <br><br>
-              <input type="submit" value="Login">
+              <input id="button" type="submit" value="Login">
             </form>
-
-
+            <br>
           </div>
         </div>
-        <div id="edit" class="edit">
-        <div class="edit-form">
-          <form onsubmit="changeText()">
-            <input id="projectid" type="text" style="display:none">
-            <br><br>
-            <input id="newname" type="text" required>
-            <br><br>
-            <br><br>
-            <input type="submit" value="Edit">
-          </form>
 
+
+        <div id="edit" class="register">
+        <div class="register-form">
+          <form onsubmit="changeText()" >
+            <input id="projectid" type="text" style="display:none">
+            <br>
+            <input class="input-form" id="newname" type="text" placeholder="new name" required>
+            <br><br>
+            <input id="button" type="submit" value="Edit Name">
+          </form>
 
         </div>
       </div>
-
     <div class="body_section" id="body" >
 
     <div class="vertical1" id="column1">
