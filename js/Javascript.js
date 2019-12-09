@@ -11,7 +11,6 @@
   function showEdit(elem){
     document.getElementById("projectid").value= elem;
     document.getElementById("edit").style.display="block";
-    alert("afsddas");
   }
 
   function changeText(){
