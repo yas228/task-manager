@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/task.css">
     <script src="js/Javascript.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
   </head>
   <body >
     <div class="fixed-header">
@@ -487,8 +488,9 @@
 
 
             <div class="task_creator">
-                <input type="textarea" id="chat" placeholder="Type your message here">
-                <input type="button" value="Send" onclick="sendMessage()">
+                <input type="textarea" id="new_task_name" placeholder="Type your task name here">
+                <input type="textarea" id="new_task_description" placeholder="Type your task description here">
+                <input type="button" value="Send" onclick="newTask()">
             </div>
             
         </div>
