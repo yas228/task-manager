@@ -1,5 +1,5 @@
-.container {
-    display: grid;
+.containertask {
+    display: none;
     grid-template-columns: 5% 20% auto;
     grid-template-rows: auto;
     width: 100%;
@@ -107,7 +107,7 @@
 }
 
 #projectList{
-     margin: 0 20px; 
+     margin: 0 20px;
     /* grid-template-columns: repeat(auto-fill, 32%); */
     grid-template-rows: auto;
     /* grid-gap: 20px; */
@@ -251,7 +251,7 @@ div.project-header-title2-container{
 }
 
 div.task_container{
-  
+
   width: 100%;
   height: 20%;
   top: 0;
@@ -284,8 +284,7 @@ div.task_hamburguer{
   display:inline;
 }
 
-div.task{
-}
+
 
 h4.text_task_name{
   display:inline;
@@ -308,6 +307,36 @@ img.task-icon1{
   z-index: 10px;
 
 }
+input[type="checkbox"] {
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -9999px;
+}
+
+div.task_creator{
+  background: rgb(54, 54, 54);
+    height: 7%;
+    border: 1px solid #black;
+    padding-bottom: 5%;
+    border-radius: 10px;
+  width: 100%;
+}
+
+
+
+input.input_name{
+  float:left;
+  width: 20%;
+}
+
+input.input_description{
+  float:right;
+  width: 80%;
+}
+
+input.input_button{
+  width: 100%;
+}
+
 
 #tasks_project_2{
   display:none;
